@@ -1,0 +1,34 @@
+{
+  "title": "Fulltext",
+  "description": "Data schema for fulltext data",
+  "type": "object",
+  "properties": {
+    "body": {
+      "type": "string",
+      "description": "Extracted fulltext body from source"
+    },
+    "acknowledgements": {
+      "type": "string",
+      "description": "Acknowledgements from fulltext body if available"
+    },
+    "footnotes": {
+      "type": "array",
+      "description": "List of footnotes extracted from fulltext if any",
+      "items": {
+        "type": "string"
+      }
+    },
+    "captions": {
+      "type": "array",
+      "description": "List of figure and table caption data extracted from fulltext if any",
+      "items": {
+        "$ref": "./Caption.json"
+      }
+    },
+    "fulltext_uuid": {
+      "type": "string",
+      "description": "Source UUID for fulltext data"
+    }
+  },
+  "additionalProperties": false
+}
